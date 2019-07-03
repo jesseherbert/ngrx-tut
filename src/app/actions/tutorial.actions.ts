@@ -5,6 +5,7 @@ import { Tutorial } from '../models/tutorial.model'
 // Section 2
 export const ADD_TUTORIAL       = '[TUTORIAL] Add'
 export const REMOVE_TUTORIAL    = '[TUTORIAL] Remove'
+export const RANDOM_ACTION            = '[TUTORIAL] Random '
 
 // Section 3
 //This is an action
@@ -22,6 +23,13 @@ export class RemoveTutorial implements Action {
     constructor(public payload: number) {}
 }
 
+//This is an action
+export class Random implements Action {
+    readonly type = RANDOM_ACTION
+
+    constructor() {}
+}
+
 //This will allow us to access the actions in the reducer
 // Section 4
-export type Actions = AddTutorial | RemoveTutorial
+export type Actions = AddTutorial | RemoveTutorial | Random

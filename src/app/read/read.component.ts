@@ -41,6 +41,10 @@ export class ReadComponent implements OnInit {
     this.store.dispatch(new TutorialActions.RemoveTutorial(index) )
   }
 
+  random(){
+    this.store.dispatch(new TutorialActions.Random());
+  }
+
   ngOnInit() {
   }
 

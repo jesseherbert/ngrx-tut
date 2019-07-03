@@ -34,9 +34,16 @@ export function reducer(state: Tutorial[] = [initialState], action: TutorialActi
                 //state is an array of Tutorial objects
                 state.splice(action.payload, 1)
                 state.forEach(function (tutorial) {
-                    console.log(tutorial);
                 })
                 return state;
+
+                case TutorialActions.RANDOM_ACTION:
+                        //state is an array of Tutorial objects
+                        
+                        state.forEach(function (tutorial) {
+                            console.log("Performing random on " + tutorial.name);
+                        })
+                        return state;
                 
             default:
                 return state;
